@@ -1,0 +1,212 @@
+*{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+
+body{
+    box-sizing: border-box;
+    padding: 2%;
+}
+
+h3{
+    font-family: 'Klavika Bold';
+    color: #535353;
+    font-size: 150%;
+    
+}
+.text_size{
+ font-size: 75%;  
+}
+.app-m{
+padding-top: 1%;
+ font-size: 75%;
+}
+
+#b1, #b2 {
+    font-size: 75%;
+}
+
+.buttoms{
+    padding-bottom: 8%;
+}
+
+.btn-primary{
+    background-color:#023f86;
+    border:0;
+}
+
+.btn-color{
+    background-color:#8C8C8C;
+    border:0;
+}
+
+
+.navbar-color{
+    background-color:#023f86 !important;
+    height: 2%;
+}
+
+.navbar{
+    color: white;
+    background-color: #e51b54;
+
+}
+
+.inputform{
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+
+.form-signin {
+    width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+    background-color: #fcfcfc;
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 1px solid #c2c2c2;
+}
+
+.form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: 12px;
+    color: #fcfcfc;
+}
+
+.form-label-group > input,
+.form-label-group > label {
+  height: 2.125rem;
+  padding: .375rem;
+}
+
+.form-label-group > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0; /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  pointer-events: none;
+  cursor: text; /* Match the input under the label */
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: 1.25rem;
+  padding-bottom: .25rem;
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: 9px;
+  color: #777;
+}
+
+
+@include media-breakpoint-between(xs,sm){
+  .btn {
+      @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+  }
+}
+
+/* Fallback for Edge
+-------------------------------------------------- */
+@supports (-ms-ime-align: auto) {
+  .form-label-group > label {
+    display: none;
+  }
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .form-label-group > label {
+    display: none;
+  }
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #023f86;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+}
